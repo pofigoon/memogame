@@ -187,7 +187,7 @@ var _self, _config, _data, _canvas;
 
         $.each(cardsArray, function(i, e){
             cnt++;
-            _canvas.find(".axplay").append(_tpl.card.replace(/{ID}/g,e[1]).replace(/{BACK}/g, e[0]).replace(/{FRONT}/g, (_config._debug ? e[1] : "")).replace("{CARD_ID}", cnt));
+            _canvas.find(".axplay .container").append(_tpl.card.replace(/{ID}/g,e[1]).replace(/{BACK}/g, e[0]).replace(/{FRONT}/g, (_config._debug ? e[1] : "")).replace("{CARD_ID}", cnt));
         });}
 
     dropError = function(msg){
