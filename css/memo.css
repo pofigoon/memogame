@@ -1,11 +1,18 @@
 body {
     font-family: sans-serif;
+    margin: 0;
 }
 
+.game {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -240px;
+}
 .axgame-wrapper {
   margin:auto;
   width: 640px;
-  height:480px;
 }
 
 .axgame {
