@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+}
+
+.axgame-wrapper {
+      margin:auto;
+    width: 640px;
+    height:480px;
+}
+
+.axgame {
+    display:table-cell;
+    vertical-align: middle;
+    margin:auto;
+    width: 640px;
+    height:480px;
+    background: white;
+    border-bottom: 4px solid #A1B4B9;
+    margin-top: 5%;
+    position: relative;
+    padding: 6px;
+    overflow: hidden;
+    text-align: center;
+    background: url(../img/bg.png) center no-repeat;
+}
+
+.axgame p {
+    font-size: 24px;
+}
+
+.axgame p span {
+    font-weight: bold;
+}
+
+
+.axgame .button {
+    cursor: pointer;
+    display:inline-block;
+    padding: 8px;
+    width: 40%;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    background: #0eb1d4;
+    border-bottom: 4px solid #0B96B3;
+    color: white;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+.axgame .button:hover {
+  width: 90%;
+}
+/* game screens */
+.axhome, .axwin, .axplay{
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* HOME */
+.axgame[data-screen=home] .axwin, .axgame[data-screen=home] .axlose, .axgame[data-screen=home] .axplay {
+    display: none;
+}
+
+
+
+/* GAME */
+.axgame[data-screen=play] .axwin, .axgame[data-screen=play] .axlose, .axgame[data-screen=play] .axhome {
+    display: none;
+}
+
+.axgame .card {
+    display: inline-block;
+    width: 80px;
+    height: 100px;
+    margin-left: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.axgame .card.flipped {
+    cursor: default;
+}
+.axgame .card .flipper{
+     border-radius: 4px;
+     background: #ffac6c;
+
+    border-bottom: 4px solid #A67046;
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000;
+}
+
+.axgame .card .front, .axgame .card .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+    width:100%;
+    height:100%;
+     border-radius: 4px;
+}
+
+.axgame .card .front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.axgame .card .back {
+	transform: rotateY(180deg);
+}
+
+.axgame .card.flipped {
+    opacity: 0.6;
+}
+.axgame .card.flip .flipper, .axgame .card.flipped .flipper{
+    transform: rotateY(180deg);
+/*    background: #aad400;*/
+}
+
+
+
+/* WIN */
+.axgame[data-screen=win] .axhome, .axgame[data-screen=win] .axlose, .axgame[data-screen=win] .axplay {
+    display: none;
+}
+
+/* LOSE */
+.axgame[data-screen=lose] .axhome, .axgame[data-screen=lose] .axwin, .axgame[data-screen=lose] .axplay {
+    display: none;
+}

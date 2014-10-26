@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlyApps Responsive Multiselect Demo</title>
+    <style type="text/css">
+        @import "css/memo.css" all; /* core css */
+    </style>
+    <script type="application/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="application/javascript" src="js/core.js"></script>
+    <script type="application/javascript">
+        var game;
+        $(function(){
+            if( typeof axgame == "function"){
+             game = new axgame($('.game'));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="game">
+    </div>
+
+<!--    TEmplates -->
+    <template id="axcontainer">
+    <div class="axgame-wrapper">
+        <div class="axgame">
+            <div class="axplay">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="axui">
+   <div class="axhome">
+        <div></div>
+       <p><span>MEMO</span></p>
+       <div class="button" onclick="game.startGame();" >START</div>
+    </div>
+
+    <div class="axwin">
+        <p>CONGRATULATIONS! YOU'VE MADE IT IN <br /><span></span> SECONDS (<span></span> moves)</p>
+          <div class="button" onclick="game.startGame();" >PLAY AGAIN</div>
+    </div>
+    <div class="axlose">
+        LOSE
+    </div>
+</template>
+
+<template id="axitem">
+    <img class="item" data-value="{VAL}" data-type="{TYPE}" src="{IMG}"/>
+</template>
+</body>
+</html>
