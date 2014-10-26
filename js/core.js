@@ -58,7 +58,7 @@ var _self, _config, _data, _canvas;
     this.navigate = function(dest){
         if(dest=="win"){
             $(".axgame .axwin p span:first").text(gameTimer.get());
-             $(".axgame .axwin p span:nth-child(2)").text(_data.moves);
+             $(".axgame .axwin p span:nth-of-type(2)").text(_data.moves);
         }
         _canvas.attr("data-screen", dest);
     };
@@ -131,6 +131,9 @@ var _self, _config, _data, _canvas;
         start: function(){
           _data['timerObj'] = window.setInterval(function(){
               _data.timer++;
+              if(_config._debug){
+                  console.log("timer: "+_data.timer);
+              }
           },1000);
         },
         stop: function(){
