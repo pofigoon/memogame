@@ -1,3 +1,6 @@
+//Todo: performance upgrade
+// todo: code optimization
+// todo: tablet support
 var axgame = function(container, config){
 var _self, _config, _data, _canvas;
 
