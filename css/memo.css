@@ -13,6 +13,7 @@ body {
 .axgame-wrapper {
   margin:auto;
   width: 640px;
+    background: #000;
 }
 
 .axgame {
