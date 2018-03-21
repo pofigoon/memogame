@@ -1,0 +1,160 @@
+﻿{
+  "extends": ["eslint:recommended"],
+  "rules": {
+    // Google
+    "no-cond-assign": 0,
+    "no-irregular-whitespace": 2,
+    "no-unexpected-multiline": 2,
+    "valid-jsdoc": [2, {
+      "requireParamDescription": false,
+      "requireReturnDescription": false,
+      "requireReturn": false,
+      "prefer": {"returns": "return"}
+    }],
+    "curly": 2,
+    "guard-for-in": 2,
+    "no-caller": 2,
+    "no-extra-bind": 2,
+    "no-invalid-this": 2,
+    "no-multi-spaces": 2,
+    "no-multi-str": 2,
+    "no-new-wrappers": "error",
+    "no-throw-literal": 2,
+    "no-with": 2,
+    "array-bracket-newline": 0,
+    "array-bracket-spacing": [2, "never"],
+    "array-element-newline": 0,
+    "block-spacing": [2, "never"],
+    "camelcase": [2, {"properties": "never"}],
+    "comma-spacing": 2,
+    "comma-style": 2,
+    "computed-property-spacing": 2,
+    "eol-last": 2,
+    "func-call-spacing": 2,
+    "key-spacing": 2,
+    "keyword-spacing": 2,
+    "new-cap": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multiple-empty-lines": [2, {"max": 2}],
+    "no-new-object": 2,
+    "no-tabs": 2,
+    "no-trailing-spaces": 2,
+    "object-curly-spacing": 2,
+    "semi": 2,
+    "semi-spacing": 2,
+    "space-before-blocks": 2,
+    "spaced-comment": [2, "always"],
+    "switch-colon-spacing": 2,
+    "arrow-parens": [2, "always"],
+    "constructor-super": 2,
+    "generator-star-spacing": [2, "after"],
+    "no-new-symbol": 2,
+    "no-this-before-super": 2,
+    "prefer-spread": 2,
+    "rest-spread-spacing": 2,
+    "yield-star-spacing": [2, "after"],
+
+    // Google changed
+    "no-extend-native": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "all"
+      }
+    ],
+    "comma-dangle": ["error", "always-multiline"],
+    "linebreak-style": "off",
+    "max-len": ["error", 120],
+    "one-var": ["error", "never"],
+    "quotes": ["error", "single"],
+    "require-jsdoc": "off",
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+    "no-var": "off",
+    "prefer-rest-params": "off",
+    "quote-props": [2, "as-needed"],
+
+    // Webxloo
+    "indent": [
+      "error", 4,
+      {"SwitchCase": 1}
+    ],
+    "no-array-constructor": "error",
+    "array-callback-return": "error",
+    "no-eval": "error",
+    "no-useless-escape": "error",
+    "wrap-iife": "error",
+    "no-new-func": "error",
+    "no-param-reassign": "off",
+    "no-restricted-properties": "error",
+    "no-nested-ternary": "error",
+    "no-unneeded-ternary": "error",
+    "no-mixed-operators": "error",
+    "no-else-return": "error",
+    "space-infix-ops": "error",
+    "no-whitespace-before-property": "error",
+    "padded-blocks": ["error", "never"],
+    "space-in-parens": ["error", "never"],
+    "vars-on-top": "error",
+    "lines-around-comment": ["error", {
+      "beforeBlockComment": false,
+      "beforeLineComment": false
+    }],
+    "eqeqeq": ["error", "always"],
+    "newline-per-chained-call": [
+      "error",
+      { "ignoreChainWithDepth": 2 }
+    ],
+    "operator-linebreak": ["error", "before"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "block",
+          "block-like",
+          "cjs-export",
+          "class",
+          "const",
+          "export",
+          "import",
+          "let",
+          "var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "block",
+          "block-like",
+          "cjs-export",
+          "class",
+          "const",
+          "export",
+          "import",
+          "let",
+          "var"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "never",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      },
+      { "blankLine": "any", "prev": ["export", "import"], "next": ["export", "import"] }
+    ],
+    "brace-style": "error"
+  },
+  "plugins": [ "html" ],
+  "settings": {
+    "html/html-extensions": [".html", ".tpl", ".phtml", ".php"]
+  },
+  "globals": {
+    "window": true,
+    "jQuery": true,
+    "$": true,
+    "document": true
+  }
+}
