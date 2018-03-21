@@ -1,6 +1,7 @@
 //Todo: performance upgrade
 // todo: code optimization
 // todo: tablet support
+// testing eslint integration
 var axgame = function(container, config){
 var _self, _config, _data, _canvas;
 
