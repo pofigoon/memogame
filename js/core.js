@@ -2,7 +2,7 @@
 // todo: code optimization
 // todo: tablet support
 // testing eslint integration
-var axgame = function(container, config){
+window.axgame = function(container, config){
 var _self, _config, _data, _canvas;
 
     _self = this;
